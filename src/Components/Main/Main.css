@@ -1,0 +1,28 @@
+main {
+  background-color: white;
+  width: 295px;
+  height: 300px;
+  display: flex;
+  /*justify-content: center;  
+  align-items: center;  */
+}
+.container_text {
+  width: 295px;
+  height: 245px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container_button {
+  width: 295px;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container_text_ejer {
+  width: 295px;
+  height: 245px;
+  background-color: white;
+}

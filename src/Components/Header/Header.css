@@ -1,0 +1,37 @@
+.nav_up {
+  width: 300px;
+  height: 65px;
+  background-color: rgb(96, 129, 191);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.icon_menu {
+  width: 33px;
+  height: 33px;
+  margin-top: 40px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.icon_user {
+  width: 28px;
+  height: 28px;
+  margin-top: 28px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.nav_down {
+  width: 300px;
+  height: 140px;
+  background-color: rgb(125, 154, 196);
+
+
+}
+.logo {
+  margin-top: 33px;
+  margin-left: 5px;
+}
