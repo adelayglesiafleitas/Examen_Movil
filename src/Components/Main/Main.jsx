@@ -1,16 +1,12 @@
 import "./Main.css";
+import Play from "./Play/Play.jsx";
 
 const Main = () => {
   return (
     <main>
       <div className="container_text">
         <div className="container_text_ejer">
-          {
-            //aqui va las preguntas
-          }
-        </div>
-        <div className="container_button">
-          <button>Vamos Ya!</button>
+          <Play />
         </div>
       </div>
     </main>

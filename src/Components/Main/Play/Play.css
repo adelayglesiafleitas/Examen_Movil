@@ -1,0 +1,8 @@
+.container_Play {
+  padding: 5px;
+}
+
+.container_Play p {
+  color: var(--gray);
+  font-size: 15xp;
+}
