@@ -5,9 +5,9 @@ import { useState, useEffect } from "react";
 import { getRandom30Numbers } from "../../../Function/Fuction.js";
 
 const Play = () => {
-  const [textActive, setTextActive] = useState(true);
   const [list, setList] = useState([]);
   const [gameOver, setGameOver] = useState(false);
+  const [score, setScoreRef] = useState(0); //guardar puntuacion
 
   useEffect(() => {
     const numeros = Array.from({ length: 60 }, (_, i) => i + 1); // Create a list of numbers from 1 to 60
@@ -28,9 +28,10 @@ const Play = () => {
           list={list}
           gameOver={gameOver}
           setGameOver={setGameOver}
+          setScoreRef={setScoreRef}
         />
       ) : (
-        <h1>termino</h1>
+        <h1>Su Puntuaccion es de {Math.round(score)}%</h1>
       )}
     </>
   );
