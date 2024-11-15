@@ -1,5 +1,5 @@
 export function getRandom30Numbers(numbers) {
-  if (numbers.length < 60) {
+  if (numbers.length < 59) {
     throw new Error("La lista debe contener al menos 60 números.");
   }
 

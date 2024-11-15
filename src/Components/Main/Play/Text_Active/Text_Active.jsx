@@ -1,8 +1,14 @@
 /* eslint-disable react/prop-types */
-import "./Text_Active.css";
+import "../../../../Styles/Text_Active.css";
 import { useRef, useState, useEffect } from "react";
 
-const Text_Active = ({questions,  list,gameOver,setGameOver,setScoreRef,}) => {
+const Text_Active = ({
+  questions,
+  list,
+  gameOver,
+  setGameOver,
+  setScoreRef,
+}) => {
   const contadorRef = useRef(0);
   const scoreRef = useRef(0); //guardar puntuacion
   const [number, setNumber] = useState(0);
@@ -36,7 +42,7 @@ const Text_Active = ({questions,  list,gameOver,setGameOver,setScoreRef,}) => {
       }
       if (contadorRef.current === 30) {
         //reach 30 turns
-        console.log("Reached 30 actions");        
+        console.log("Reached 30 actions");
         setScoreRef((scoreRef.current * 100) / 30);
         setGameOver(true);
       }

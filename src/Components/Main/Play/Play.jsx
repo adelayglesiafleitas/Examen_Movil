@@ -1,4 +1,4 @@
-import "./Play.css";
+import "../../../Styles/Play.css";
 import Text_Active from "./Text_Active/Text_Active.jsx";
 import { questions } from "../../../data/data.json";
 import { useState, useEffect } from "react";
@@ -10,7 +10,7 @@ const Play = () => {
   const [score, setScoreRef] = useState(0); //guardar puntuacion
 
   useEffect(() => {
-    const numeros = Array.from({ length: 60 }, (_, i) => i + 1); // Create a list of numbers from 1 to 60
+    const numeros = Array.from({ length: 59 }, (_, i) => i + 1); // Create a list of numbers from 1 to 60
     const listNew = getRandom30Numbers(numeros); // Get random 30 numbers from the list
     setList(listNew);
   }, []);

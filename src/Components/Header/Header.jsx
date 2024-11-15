@@ -1,4 +1,4 @@
-import "./Header.css";
+import "../../Styles/Header.css";
 import Icon_menu from "../../assets/Header/icon_menu.png";
 import Icon_user from "../../assets/Header/icon_user.png";
 import Logo from "../../assets/Header/logo.png";

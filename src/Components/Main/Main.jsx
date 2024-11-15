@@ -1,4 +1,4 @@
-import "./Main.css";
+import "../../Styles/Main.css";
 import Play from "./Play/Play.jsx";
 
 const Main = () => {
