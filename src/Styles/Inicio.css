@@ -1,0 +1,23 @@
+.container_inicio {
+  width: 295px;
+  height: 245px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_inicio button {
+  width: 80px;
+  height: 40px;
+  background-color: rgb(158, 198, 197);
+  border: none;
+  color: white;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.1);
+  transition: background-color 1s;
+}
+.container_inicio button:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}

@@ -8,6 +8,7 @@ const Text_Active = ({
   gameOver,
   setGameOver,
   setScoreRef,
+  time,
 }) => {
   const contadorRef = useRef(0);
   const scoreRef = useRef(0); //guardar puntuacion
@@ -61,9 +62,19 @@ const Text_Active = ({
     setGameOver(true);
   };
 
+  const formatTime = (time) => {
+    const minutes = String(Math.floor(time / 60)).padStart(2, "0");
+    const seconds = String(time % 60).padStart(2, "0");
+    return `${minutes}:${seconds}`;
+  };
+
   return (
     <section className="container_Play">
-      <p>Selecciona opción</p>
+      <div className="container_title">
+        <p>Selecciona opción</p>
+        <p>`Time:{formatTime(time)}`</p>
+      </div>
+
       <div>
         {questions[number].answers.map((question, index) => (
           <div key={question.id}>

@@ -4,9 +4,8 @@ import { questions } from "../../../data/data.json";
 import { useState, useEffect } from "react";
 import { getRandom30Numbers } from "../../../Function/Fuction.js";
 
-const Play = () => {
+const Play = ({ time, gameOver, setGameOver }) => {
   const [list, setList] = useState([]);
-  const [gameOver, setGameOver] = useState(false);
   const [score, setScoreRef] = useState(0); //guardar puntuacion
 
   useEffect(() => {
@@ -29,6 +28,7 @@ const Play = () => {
           gameOver={gameOver}
           setGameOver={setGameOver}
           setScoreRef={setScoreRef}
+          time={time}
         />
       ) : (
         <h1>Su Puntuaccion es de {Math.round(score)}%</h1>
