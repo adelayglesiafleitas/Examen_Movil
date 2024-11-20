@@ -7,6 +7,9 @@ const Main = () => {
   const [start, setStart] = useState(true);
   const [time, setTime] = useState(0); // Tiempo en segundos
   const [gameOver, setGameOver] = useState(false);
+  const [score, setScore] = useState(0); // Store score
+
+  console.log(score);
 
   useEffect(() => {
     let timer;
@@ -15,7 +18,11 @@ const Main = () => {
       timer = setInterval(() => {
         setTime((prevTime) => {
           if (prevTime >= 30 * 1) {
-            /* 30 minutos en segundos*/ setGameOver(true); // Cambia `start` a `true` cuando el tiempo alcanza 30 minutos
+            /* 30 minutos en segundos*/
+            const scorePercentage = Math.round((score / 30) * 100);
+            setScore(scorePercentage); // Round to the nearest integer
+
+            setGameOver(true); // Cambia `start` a `true` cuando el tiempo alcanza 30 minutos
             clearInterval(timer); // Detiene el temporizador
             return 0; // Reinicia el tiempo
           }
@@ -38,7 +45,13 @@ const Main = () => {
           {start ? (
             <Inicio setStart={setStart} />
           ) : (
-            <Play time={time} gameOver={gameOver} v={setGameOver} />
+            <Play
+              score={score}
+              setScore={setScore}
+              time={time}
+              gameOver={gameOver}
+              setGameOver={setGameOver}
+            />
           )}
         </div>
       </div>

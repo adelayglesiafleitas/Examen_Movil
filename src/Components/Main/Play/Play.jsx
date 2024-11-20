@@ -4,34 +4,39 @@ import { questions } from "../../../data/data.json";
 import { useState, useEffect } from "react";
 import { getRandom30Numbers } from "../../../Function/Fuction.js";
 
-const Play = ({ time, gameOver, setGameOver }) => {
-  const [list, setList] = useState([]);
-  const [score, setScoreRef] = useState(0); //guardar puntuacion
+const Play = ({ time, gameOver, setGameOver, score, setScore, calcScore }) => {
+  const [lisdata, setLisdata] = useState([]); // List of data based on numbers
 
   useEffect(() => {
-    const numeros = Array.from({ length: 59 }, (_, i) => i + 1); // Create a list of numbers from 1 to 60
-    const listNew = getRandom30Numbers(numeros); // Get random 30 numbers from the list
-    setList(listNew);
+    // Create a list of numbers from 1 to 59
+    const numeros = Array.from({ length: 59 }, (_, i) => i + 1);
+
+    // Get 30 unique random numbers
+    const listNew = getRandom30Numbers(numeros);
+
+    // Generate data based on the random numbers
+    const newListData = listNew.map((element) => questions[element]);
+    setLisdata(newListData);
+    console.table("Generated data:", newListData); // Log the new data instead
   }, []);
-
-  // Logging the updated list after setting it
-  useEffect(() => {
-    console.log(list);
-  }, [list]); // Log whenever 'list' updates
 
   return (
     <>
       {!gameOver ? (
-        <Text_Active
-          questions={questions}
-          list={list}
-          gameOver={gameOver}
-          setGameOver={setGameOver}
-          setScoreRef={setScoreRef}
-          time={time}
-        />
+        lisdata.length === 0 ? ( // Change to === 0
+          "Loading..."
+        ) : (
+          <Text_Active
+            setGameOver={setGameOver}
+            score={score}
+            setScore={setScore}
+            time={time}
+            lisdata={lisdata}
+            setLisdata={setLisdata}
+          />
+        )
       ) : (
-        <h1>Su Puntuaccion es de {Math.round(score)}%</h1>
+        <h1>Your Score is {score}</h1>
       )}
     </>
   );

@@ -1,64 +1,49 @@
 /* eslint-disable react/prop-types */
 import "../../../../Styles/Text_Active.css";
+
 import { useRef, useState, useEffect } from "react";
 
-const Text_Active = ({
-  questions,
-  list,
-  gameOver,
-  setGameOver,
-  setScoreRef,
-  time,
-}) => {
-  const contadorRef = useRef(0);
-  const scoreRef = useRef(0); //guardar puntuacion
+const Text_Active = ({ setGameOver, time, lisdata, score, setScore }) => {
+  const [contador, setContador] = useState(0);
+  //guardar puntuacion
   const [number, setNumber] = useState(0);
-
   const [selectedIndex, setSelectedIndex] = useState(null); // Estado para almacenar el índice del botón seleccionado
-
-  /*// ARREGLAS RPOBLEMA DE ASINCROMATICO PARA INICIAR EL NUMERO  
-  useEffect(() => {  
-    console.log(list);  
-    list ? setNumber(list[0]) : setNumber(0);  
-  }, []);*/
-
   const siguiente = () => {
-    if (selectedIndex === null) {
-      return alert("Seleccione una opción");
+    if (contador == 29) {
+      setContador(0);
     } else {
-      if (contadorRef.current < 30) {
-        console.log(`el contador es ${contadorRef.current}`);
-        contadorRef.current += 1;
-        const newNumber = list[contadorRef.current];
-        setNumber(newNumber);
-        console.log(`el numero es ${number}`);
-
-        if (questions[number].answers[selectedIndex].answer === "si") {
-          console.log("entre en si");
-          scoreRef.current += 1;
-          console.log(`la puntuacion es de ${scoreRef.current}`);
-        }
-
-        setSelectedIndex(null); //reseteo la seleccion
-      }
-      if (contadorRef.current === 30) {
-        //reach 30 turns
-        console.log("Reached 30 actions");
-        setScoreRef((scoreRef.current * 100) / 30);
-        setGameOver(true);
-      }
+      setContador((prev) => prev + 1);
     }
   };
-
   const atras = () => {
-    if (number > 0) {
-      setNumber((prevNumber) => prevNumber - 1);
+    if (contador < 1) {
+      console.log("entro");
+      setContador(29);
+    } else {
+      setContador((prev) => prev - 1);
     }
   };
 
   const finalizar = () => {
-    // Handle game finalization logic
+    let correctAnswersCount = 0;
+
+    lisdata.forEach((data) => {
+      data.answers.forEach((answer) => {
+        if (answer.seleccionado === true && answer.question) {
+          correctAnswersCount += 1;
+        }
+      });
+    });
+
+    const totalQuestions = 30; // Adjust this if necessary
+    const scorePercentage = Math.round(
+      (correctAnswersCount / totalQuestions) * 100
+    ); // Round to the nearest integer
+
+    setScore(scorePercentage); // Set the calculated score as an integer
+
     console.log("Game Finished");
+    console.log("Final Score:", scorePercentage); // Log the final score
     setGameOver(true);
   };
 
@@ -68,32 +53,50 @@ const Text_Active = ({
     return `${minutes}:${seconds}`;
   };
 
+  const checkClickSelect = (index) => {
+    // Reset the selected state of all answers for the current question
+    lisdata[contador].answers.forEach((data) => {
+      data.seleccionado = false;
+
+      //validar score
+    });
+
+    lisdata[contador].answers[index].seleccionado = true; //active index check
+    console.log(lisdata[contador].answers);
+    setSelectedIndex(index);
+  };
+
   return (
     <section className="container_Play">
       <div className="container_title">
-        <p>Selecciona opción</p>
-        <p>`Time:{formatTime(time)}`</p>
+        <p>Selecciona una Opción</p>
+        <p>Time: {formatTime(time)}</p>
+      </div>
+      <div className="container_title">
+        <p>Pregunta: {contador + 1}</p>
       </div>
 
       <div>
-        {questions[number].answers.map((question, index) => (
-          <div key={question.id}>
-            <div className="container_question">
-              <div className="container_question_BT">
-                <button
-                  onClick={() => {
-                    setSelectedIndex(index); // Actualiza el índice seleccionado
-                  }}
-                  className={selectedIndex === index ? "selected" : ""} // Aplica clase si está seleccionado
-                >
-                  {question.simbol}
-                </button>
-                <p>{question.question}</p>
+        {lisdata.length > 0 ? (
+          lisdata[contador].answers.map((question, index) => (
+            <div key={question.id}>
+              <div className="container_question">
+                <div className="container_question_BT">
+                  <button
+                    onClick={() => checkClickSelect(index)}
+                    className={question.seleccionado ? "selected" : ""}
+                  >
+                    {question.simbol}
+                  </button>
+                  <p>{question.question}</p>
+                </div>
+                <hr />
               </div>
-              <hr />
             </div>
-          </div>
-        ))}
+          ))
+        ) : (
+          <p>Loading questions...</p>
+        )}
       </div>
       <div className="container_buttons">
         <button onClick={atras}>Atrás</button>
