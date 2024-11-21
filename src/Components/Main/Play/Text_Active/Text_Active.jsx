@@ -3,17 +3,37 @@ import "../../../../Styles/Text_Active.css";
 
 import { useRef, useState, useEffect } from "react";
 
-const Text_Active = ({ setGameOver, time, lisdata, score, setScore }) => {
+const Text_Active = ({ setGameOver, time, lisdata, score, setScore}) => {
   const [contador, setContador] = useState(0);
   //guardar puntuacion
   const [number, setNumber] = useState(0);
   const [selectedIndex, setSelectedIndex] = useState(null); // Estado para almacenar el índice del botón seleccionado
+
+  const calcScore = () => {
+    let correctAnswersCount = 0;
+    lisdata.forEach((data) => {
+      data.answers.forEach((answer) => {
+        if (answer.seleccionado === true && answer.question == "verdadero") {
+          correctAnswersCount += 1;
+        }
+      });
+    });
+
+    const totalQuestions = 30;
+    const scorePercentage = Math.round(
+      (correctAnswersCount / totalQuestions) * 100
+    );
+
+    setScore(scorePercentage);
+  };
+
   const siguiente = () => {
     if (contador == 29) {
       setContador(0);
     } else {
       setContador((prev) => prev + 1);
     }
+    calcScore();
   };
   const atras = () => {
     if (contador < 1) {
@@ -22,28 +42,11 @@ const Text_Active = ({ setGameOver, time, lisdata, score, setScore }) => {
     } else {
       setContador((prev) => prev - 1);
     }
+    calcScore();
   };
 
   const finalizar = () => {
-    let correctAnswersCount = 0;
-
-    lisdata.forEach((data) => {
-      data.answers.forEach((answer) => {
-        if (answer.seleccionado === true && answer.question) {
-          correctAnswersCount += 1;
-        }
-      });
-    });
-
-    const totalQuestions = 30; // Adjust this if necessary
-    const scorePercentage = Math.round(
-      (correctAnswersCount / totalQuestions) * 100
-    ); // Round to the nearest integer
-
-    setScore(scorePercentage); // Set the calculated score as an integer
-
-    console.log("Game Finished");
-    console.log("Final Score:", scorePercentage); // Log the final score
+    calcScore();
     setGameOver(true);
   };
 
@@ -57,12 +60,9 @@ const Text_Active = ({ setGameOver, time, lisdata, score, setScore }) => {
     // Reset the selected state of all answers for the current question
     lisdata[contador].answers.forEach((data) => {
       data.seleccionado = false;
-
-      //validar score
     });
 
-    lisdata[contador].answers[index].seleccionado = true; //active index check
-    console.log(lisdata[contador].answers);
+    lisdata[contador].answers[index].seleccionado = true; //active index check   
     setSelectedIndex(index);
   };
 

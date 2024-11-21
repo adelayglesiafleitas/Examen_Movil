@@ -1,6 +1,6 @@
 import "../../../Styles/Inicio.css";
 
-const Inicio = ({ setStart }) => {
+const Inicio = ({ setStart, tesTime, setTesTime }) => {
   return (
     <>
       <section className="container_inicio">

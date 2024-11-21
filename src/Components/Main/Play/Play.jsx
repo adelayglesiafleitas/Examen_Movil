@@ -3,6 +3,7 @@ import Text_Active from "./Text_Active/Text_Active.jsx";
 import { questions } from "../../../data/data.json";
 import { useState, useEffect } from "react";
 import { getRandom30Numbers } from "../../../Function/Fuction.js";
+import Final from "./Final/Final.jsx";
 
 const Play = ({ time, gameOver, setGameOver, score, setScore, calcScore }) => {
   const [lisdata, setLisdata] = useState([]); // List of data based on numbers
@@ -17,13 +18,12 @@ const Play = ({ time, gameOver, setGameOver, score, setScore, calcScore }) => {
     // Generate data based on the random numbers
     const newListData = listNew.map((element) => questions[element]);
     setLisdata(newListData);
-    console.table("Generated data:", newListData); // Log the new data instead
   }, []);
 
   return (
     <>
       {!gameOver ? (
-        lisdata.length === 0 ? ( // Change to === 0
+        lisdata.length === 0 ? (
           "Loading..."
         ) : (
           <Text_Active
@@ -36,7 +36,7 @@ const Play = ({ time, gameOver, setGameOver, score, setScore, calcScore }) => {
           />
         )
       ) : (
-        <h1>Your Score is {score}</h1>
+        <Final score={score} />
       )}
     </>
   );

@@ -8,8 +8,7 @@ const Main = () => {
   const [time, setTime] = useState(0); // Tiempo en segundos
   const [gameOver, setGameOver] = useState(false);
   const [score, setScore] = useState(0); // Store score
-
-  console.log(score);
+  const [tesTime, setTesTime] = useState(30);
 
   useEffect(() => {
     let timer;
@@ -34,16 +33,18 @@ const Main = () => {
     }
 
     return () => clearInterval(timer); // Limpia el intervalo al desmontar o cambiar `start`
-  }, [start]);
-
-  // Convierte el tiempo en formato MM:SS
+  }, [start, gameOver]);
 
   return (
     <main>
       <div className="container_text">
         <div className="container_text_ejer">
           {start ? (
-            <Inicio setStart={setStart} />
+            <Inicio
+              setStart={setStart}
+              tesTime={tesTime}
+              setTesTime={setTesTime}
+            />
           ) : (
             <Play
               score={score}
