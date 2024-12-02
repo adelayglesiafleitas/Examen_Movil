@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { getRandom30Numbers } from "../../../Function/Fuction.js";
 import Final from "./Final/Final.jsx";
 
-const Play = ({ time, gameOver, setGameOver, score, setScore, calcScore }) => {
+const Play = ({ time, gameOver, setGameOver, score, setScore, calcScore, contador, setContador ,setQuestion }) => {
   const [lisdata, setLisdata] = useState([]); // List of data based on numbers
 
   useEffect(() => {
@@ -18,6 +18,8 @@ const Play = ({ time, gameOver, setGameOver, score, setScore, calcScore }) => {
     // Generate data based on the random numbers
     const newListData = listNew.map((element) => questions[element]);
     setLisdata(newListData);
+    const question = newListData[0].question;
+    setQuestion(question);
   }, []);
 
   return (
@@ -33,6 +35,9 @@ const Play = ({ time, gameOver, setGameOver, score, setScore, calcScore }) => {
             time={time}
             lisdata={lisdata}
             setLisdata={setLisdata}
+            contador={contador}
+            setContador={setContador}
+            setQuestion = {setQuestion}
           />
         )
       ) : (

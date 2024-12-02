@@ -3,8 +3,17 @@ import "../../../../Styles/Text_Active.css";
 
 import { useRef, useState, useEffect } from "react";
 
-const Text_Active = ({ setGameOver, time, lisdata, score, setScore}) => {
-  const [contador, setContador] = useState(0);
+const Text_Active = ({
+  setGameOver,
+  time,
+  lisdata,
+  score,
+  setScore,
+  contador,
+  setContador,
+  setQuestion,
+}) => {
+  //const [contador, setContador] = useState(0);
   //guardar puntuacion
   const [number, setNumber] = useState(0);
   const [selectedIndex, setSelectedIndex] = useState(null); // Estado para almacenar el índice del botón seleccionado
@@ -33,6 +42,8 @@ const Text_Active = ({ setGameOver, time, lisdata, score, setScore}) => {
     } else {
       setContador((prev) => prev + 1);
     }
+    const question = lisdata[contador + 1].question;
+    setQuestion(question);
     calcScore();
   };
   const atras = () => {
@@ -42,6 +53,8 @@ const Text_Active = ({ setGameOver, time, lisdata, score, setScore}) => {
     } else {
       setContador((prev) => prev - 1);
     }
+    const question = lisdata[contador - 1].question;
+    setQuestion(question);
     calcScore();
   };
 
@@ -62,7 +75,7 @@ const Text_Active = ({ setGameOver, time, lisdata, score, setScore}) => {
       data.seleccionado = false;
     });
 
-    lisdata[contador].answers[index].seleccionado = true; //active index check   
+    lisdata[contador].answers[index].seleccionado = true; //active index check
     setSelectedIndex(index);
   };
 
@@ -82,12 +95,15 @@ const Text_Active = ({ setGameOver, time, lisdata, score, setScore}) => {
             <div key={question.id}>
               <div className="container_question">
                 <div className="container_question_BT">
-                  <button
-                    onClick={() => checkClickSelect(index)}
-                    className={question.seleccionado ? "selected" : ""}
-                  >
-                    {question.simbol}
-                  </button>
+                  <div>
+                    <button
+                      onClick={() => checkClickSelect(index)}
+                      className={question.seleccionado ? "selected" : ""}
+                    >
+                      {question.simbol}
+                    </button>
+                  </div>
+
                   <p>{question.question}</p>
                 </div>
                 <hr />

@@ -2,30 +2,31 @@
   "questions": [
     {
       "id": 1,
+      "question": "¿Cuál es la característica principal de la leucoplasia?",
       "answers": [
         {
-          "question": "falso",
+          "question": "Es una lesión maligna potencial",
           "simbol": "A",
           "answer": "no",
           "id": 1,
-          "seleccionado": true
+          "seleccionado": false
         },
         {
-          "question": "verdadero",
+          "question": "No desaparece al raspar",
           "simbol": "B",
           "answer": "si",
           "id": 2,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Se resuelve al eliminar factores traumáticos",
           "simbol": "C",
           "answer": "no",
           "id": 3,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Tiene una histología específica.",
           "simbol": "D",
           "answer": "no",
           "id": 4,
@@ -35,30 +36,31 @@
     },
     {
       "id": 2,
+      "question": "¿En qué consiste el diagnóstico de leucoplasia?",
       "answers": [
         {
-          "question": "falso",
+          "question": "Se realiza mediante exclusión de otras patologías orales.",
           "simbol": "A",
-          "answer": "no",
+          "answer": "si",
           "id": 5,
           "seleccionado": false
         },
         {
-          "question": "verdadero",
+          "question": "Se realiza mediante estudios de laboratorio.",
           "simbol": "B",
-          "answer": "si",
+          "answer": "no",
           "id": 6,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Se basa en la histología de la lesión.",
           "simbol": "C",
           "answer": "no",
           "id": 7,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Se realiza mediante pruebas genéticas",
           "simbol": "D",
           "answer": "no",
           "id": 8,
@@ -68,32 +70,33 @@
     },
     {
       "id": 3,
+      "question": "¿Qué factores pueden aumentar el riesgo de malignización de las lesiones de leucoplasia?",
       "answers": [
         {
-          "question": "falso",
+          "question": " Consumo de tabaco",
           "simbol": "A",
           "answer": "no",
           "id": 9,
           "seleccionado": false
         },
         {
-          "question": "verdadero",
+          "question": "Presencia de displasia en la histología.",
           "simbol": "B",
-          "answer": "si",
+          "answer": "no",
           "id": 10,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "C Aspectos de la lesión y factores individuales.",
           "simbol": "C",
           "answer": "no",
           "id": 11,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Todas las anteriores",
           "simbol": "D",
-          "answer": "no",
+          "answer": "si",
           "id": 12,
           "seleccionado": false
         }
@@ -101,32 +104,33 @@
     },
     {
       "id": 4,
+      "question": "¿Cuál es uno de los mecanismos sistémicos por los que el consumo de alcohol aumenta el riesgo de cáncer oral?",
       "answers": [
         {
-          "question": "falso",
+          "question": "Metabolismo a nivel de las glándulas salivales",
           "simbol": "A",
           "answer": "no",
           "id": 13,
           "seleccionado": false
         },
         {
-          "question": "verdadero",
+          "question": "Metabolismo a nivel hepático",
           "simbol": "B",
-          "answer": "si",
+          "answer": "no",
           "id": 14,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Acción de los metabolitos del alcohol como el acetaldehído",
           "simbol": "C",
           "answer": "no",
           "id": 15,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Son ciertas A y B",
           "simbol": "D",
-          "answer": "no",
+          "answer": "si",
           "id": 16,
           "seleccionado": false
         }
@@ -134,32 +138,33 @@
     },
     {
       "id": 5,
+      "question": "¿Cuál es el principal factor de riesgo en el desarrollo del cáncer oral?",
       "answers": [
         {
-          "question": "falso",
+          "question": "Alcohol",
           "simbol": "A",
           "answer": "no",
           "id": 17,
           "seleccionado": false
         },
         {
-          "question": "verdadero",
+          "question": "Tabaco",
           "simbol": "B",
-          "answer": "si",
+          "answer": "no",
           "id": 18,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Falta de vitamina A",
           "simbol": "C",
           "answer": "no",
           "id": 19,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Son ciertas A y B",
           "simbol": "D",
-          "answer": "no",
+          "answer": "si",
           "id": 20,
           "seleccionado": false
         }
@@ -167,30 +172,31 @@
     },
     {
       "id": 6,
+      "question": "¿Qué virus se ha asociado como el más fuertemente implicado en la carcinogénesis oral?",
       "answers": [
         {
-          "question": "falso",
+          "question": "Virus del Herpes Simple (VHS)",
           "simbol": "A",
           "answer": "no",
           "id": 21,
           "seleccionado": false
         },
         {
-          "question": "verdadero",
+          "question": "B Virus del Papiloma Humano (VPH)",
           "simbol": "B",
           "answer": "si",
           "id": 22,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Virus de la Inmunodeficiencia Humana (VIH)",
           "simbol": "C",
           "answer": "no",
           "id": 23,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "D Virus de la Hepatitis B (VHB)",
           "simbol": "D",
           "answer": "no",
           "id": 24,
@@ -200,30 +206,31 @@
     },
     {
       "id": 7,
+      "question": "¿Qué porcentaje de los pacientes afectos de cáncer oral nunca han sido expuestos a los carcinógenos tradicionales como el alcohol y el tabaco?",
       "answers": [
         {
-          "question": "falso",
+          "question": "15-20%",
           "simbol": "A",
-          "answer": "no",
+          "answer": "si",
           "id": 25,
           "seleccionado": false
         },
         {
-          "question": "verdadero",
+          "question": "30-40%",
           "simbol": "B",
-          "answer": "si",
+          "answer": "no",
           "id": 26,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "50-60%",
           "simbol": "C",
           "answer": "no",
           "id": 27,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "70-80%",
           "simbol": "D",
           "answer": "no",
           "id": 28,
@@ -233,30 +240,31 @@
     },
     {
       "id": 8,
+      "question": "¿Cuál es el pronóstico de los cánceres orofaríngeos relacionados con el virus del Papiloma Humano (VPH)?",
       "answers": [
         {
-          "question": "falso",
+          "question": "No hay relación entre el VPH y el cáncer orofaríngeo",
           "simbol": "A",
           "answer": "no",
           "id": 29,
           "seleccionado": false
         },
         {
-          "question": "verdadero",
+          "question": "Mejores pronósticos",
           "simbol": "B",
           "answer": "si",
           "id": 30,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Peor pronóstico",
           "simbol": "C",
           "answer": "no",
           "id": 31,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Pronóstico similar a los causados ​​por el alcohol y el tabaco.",
           "simbol": "D",
           "answer": "no",
           "id": 32,
@@ -266,30 +274,31 @@
     },
     {
       "id": 9,
+      "question": "¿Cuál es el factor de riesgo más fuertemente implicado en el desarrollo del cáncer oral y otros carcinomas de cabeza y cuello?",
       "answers": [
         {
-          "question": "falso",
+          "question": "Son ciertas B y C",
           "simbol": "A",
-          "answer": "no",
+          "answer": "si",
           "id": 33,
           "seleccionado": false
         },
         {
-          "question": "verdadero",
+          "question": "tabaco",
           "simbol": "B",
-          "answer": "si",
+          "answer": "no",
           "id": 34,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Alcohol",
           "simbol": "C",
           "answer": "no",
           "id": 35,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Virus del Papiloma Humano (VPH)",
           "simbol": "D",
           "answer": "no",
           "id": 36,
@@ -299,30 +308,31 @@
     },
     {
       "id": 10,
+      "question": "¿Cuál es la eficacia de la vacuna del virus del Papiloma Humano (VPH) en la prevención del cáncer oral?",
       "answers": [
         {
-          "question": "falso",
+          "question": "Eficacia mínima",
           "simbol": "A",
           "answer": "no",
           "id": 37,
           "seleccionado": false
         },
         {
-          "question": "verdadero",
+          "question": "Alta eficacia",
           "simbol": "B",
-          "answer": "si",
+          "answer": "no",
           "id": 38,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "No hay evidencia de eficacia",
           "simbol": "C",
-          "answer": "no",
+          "answer": "si",
           "id": 39,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Baja eficacia",
           "simbol": "D",
           "answer": "no",
           "id": 40,
@@ -332,30 +342,31 @@
     },
     {
       "id": 11,
+      "question": "¿Cuál es la prevalencia del virus del Papiloma Humano (VPH) en tejido canceroso de la mucosa oral?",
       "answers": [
         {
-          "question": "falso",
+          "question": "Varia del 0% al 100%",
           "simbol": "A",
-          "answer": "no",
+          "answer": "si",
           "id": 41,
           "seleccionado": false
         },
         {
-          "question": "verdadero",
+          "question": "Más del 50%",
           "simbol": "B",
-          "answer": "si",
+          "answer": "no",
           "id": 42,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Menos del 50%",
           "simbol": "C",
           "answer": "no",
           "id": 43,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "No hay suficientes datos para determinar la prevalencia",
           "simbol": "D",
           "answer": "no",
           "id": 44,
@@ -365,30 +376,31 @@
     },
     {
       "id": 12,
+      "question": "¿Cuál de los siguientes factores se ha postulado como un posible causante de la carcinogénesis oral en el 15% de los casos no expuestos a los carcinógenos tradicionales?",
       "answers": [
         {
-          "question": "falso",
+          "question": "Falta de higiene bucal",
           "simbol": "A",
           "answer": "no",
           "id": 45,
           "seleccionado": false
         },
         {
-          "question": "verdadero",
+          "question": "Exposición a la radiación solar",
           "simbol": "B",
-          "answer": "si",
+          "answer": "no",
           "id": 46,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Son ciertas B y D",
           "simbol": "C",
-          "answer": "no",
+          "answer": "si",
           "id": 47,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Virus oncogénicos",
           "simbol": "D",
           "answer": "no",
           "id": 48,

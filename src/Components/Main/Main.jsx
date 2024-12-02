@@ -3,12 +3,11 @@ import Play from "./Play/Play.jsx";
 import Inicio from "./Inicio/Inicio.jsx";
 import { useState, useEffect } from "react";
 
-const Main = () => {
-  const [start, setStart] = useState(true);
+const Main = ({ contador, setContador, start, setStart, setQuestion }) => {
   const [time, setTime] = useState(0); // Tiempo en segundos
   const [gameOver, setGameOver] = useState(false);
   const [score, setScore] = useState(0); // Store score
-  const [tesTime, setTesTime] = useState(30);
+  const [tesTime, setTesTime] = useState(60);
 
   useEffect(() => {
     let timer;
@@ -16,7 +15,7 @@ const Main = () => {
       // Inicia el contador cuando `start` es `false`
       timer = setInterval(() => {
         setTime((prevTime) => {
-          if (prevTime >= 30 * 1) {
+          if (prevTime >= 30 * { tesTime }) {
             /* 30 minutos en segundos*/
             const scorePercentage = Math.round((score / 30) * 100);
             setScore(scorePercentage); // Round to the nearest integer
@@ -52,6 +51,9 @@ const Main = () => {
               time={time}
               gameOver={gameOver}
               setGameOver={setGameOver}
+              contador={contador}
+              setContador={setContador}
+              setQuestion = {setQuestion}
             />
           )}
         </div>

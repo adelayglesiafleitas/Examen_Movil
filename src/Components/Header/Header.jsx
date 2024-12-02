@@ -3,7 +3,7 @@ import Icon_menu from "../../assets/Header/icon_menu.png";
 import Icon_user from "../../assets/Header/icon_user.png";
 import Logo from "../../assets/Header/logo.png";
 
-const Header = () => {
+const Header = ({ contador, setContador, start, setStart, question }) => {
   return (
     <header>
       <nav>
@@ -16,7 +16,11 @@ const Header = () => {
           <img src={Icon_user} className="icon_user" alt="icon de Usuario" />
         </div>
         <div className="nav_down">
-          <img src={Logo} className="logo" alt="logo" />
+          {start ? (
+            <img src={Logo} className="logo" alt="logo" />
+          ) : (
+            <p>{question}</p>
+          )}
         </div>
       </nav>
     </header>
