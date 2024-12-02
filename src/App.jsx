@@ -8,6 +8,7 @@ function App() {
   const [contador, setContador] = useState(0);
   const [start, setStart] = useState(true);
   const [question, setQuestion] = useState("");
+  const [gameOver, setGameOver] = useState(false);
 
   return (
     <div className="container">
@@ -18,6 +19,7 @@ function App() {
           start={start}
           setStart={setStart}
           question={question}
+          gameOver={gameOver}
         />
         <Main
           contador={contador}
@@ -25,6 +27,8 @@ function App() {
           start={start}
           setStart={setStart}
           setQuestion={setQuestion}
+          gameOver={gameOver}
+          setGameOver={setGameOver}
         />
         {/*<Footer />*/}
       </div>

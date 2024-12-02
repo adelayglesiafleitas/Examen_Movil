@@ -3,9 +3,8 @@ import Play from "./Play/Play.jsx";
 import Inicio from "./Inicio/Inicio.jsx";
 import { useState, useEffect } from "react";
 
-const Main = ({ contador, setContador, start, setStart, setQuestion }) => {
-  const [time, setTime] = useState(0); // Tiempo en segundos
-  const [gameOver, setGameOver] = useState(false);
+const Main = ({ contador, setContador, start, setStart, setQuestion, gameOver, setGameOver  }) => {
+  const [time, setTime] = useState(0); // Tiempo en segundos  
   const [score, setScore] = useState(0); // Store score
   const [tesTime, setTesTime] = useState(60);
 

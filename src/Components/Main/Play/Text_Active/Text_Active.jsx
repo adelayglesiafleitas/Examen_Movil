@@ -22,7 +22,7 @@ const Text_Active = ({
     let correctAnswersCount = 0;
     lisdata.forEach((data) => {
       data.answers.forEach((answer) => {
-        if (answer.seleccionado === true && answer.question == "verdadero") {
+        if (answer.seleccionado === true && answer.answer === "si") {
           correctAnswersCount += 1;
         }
       });
