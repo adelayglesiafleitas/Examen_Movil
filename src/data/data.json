@@ -410,30 +410,31 @@
     },
     {
       "id": 13,
+      "question": "¿Cuáles son los tipos de virus del Papiloma Humano (VPH) considerados de alto riesgo en la producción de displasia y carcinoma oral?",
       "answers": [
         {
-          "question": "falso",
+          "question": "9, 14, 20, 25",
           "simbol": "A",
           "answer": "no",
           "id": 49,
           "seleccionado": false
         },
         {
-          "question": "verdadero",
+          "question": "16, 18, 31, 33",
           "simbol": "B",
           "answer": "si",
           "id": 50,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "6, 11, 16, 18",
           "simbol": "C",
           "answer": "no",
           "id": 51,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "1, 2, 4, 7",
           "simbol": "D",
           "answer": "no",
           "id": 52,
@@ -443,30 +444,31 @@
     },
     {
       "id": 14,
+      "question": "¿Cuál es el concepto de precáncer oral?",
       "answers": [
         {
-          "question": "falso",
+          "question": "Lesiones susceptibles de sufrir una transformación maligna con el tiempo.",
           "simbol": "A",
-          "answer": "no",
+          "answer": "si",
           "id": 53,
           "seleccionado": false
         },
         {
-          "question": "verdadero",
+          "question": "Lesiones blancas y rojas presentes en los márgenes de los carcinomas de células escamosas.",
           "simbol": "B",
-          "answer": "si",
+          "answer": "no",
           "id": 54,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Alteraciones cromosómicas, genómicas y moleculares presentes en el cáncer oral.",
           "simbol": "C",
           "answer": "no",
           "id": 55,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Alteración de la mucosa oral asociada a un incremento estadístico del riesgo de desarrollar cáncer oral.",
           "simbol": "D",
           "answer": "no",
           "id": 56,
@@ -476,30 +478,31 @@
     },
     {
       "id": 15,
+      "question": "¿Cuál es la característica principal de una leucoplasia no homogénea?",
       "answers": [
         {
-          "question": "falso",
+          "question": "Presenta una superficie irregular, nodular o exofítica.",
           "simbol": "A",
-          "answer": "no",
+          "answer": "si",
           "id": 57,
           "seleccionado": false
         },
         {
-          "question": "verdadero",
+          "question": "Suele aparecer en zonas típicas de leucoplasia como la lengua.",
           "simbol": "B",
-          "answer": "si",
+          "answer": "no",
           "id": 58,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Es asintomática y no cursa con dolor ni ardor.",
           "simbol": "C",
           "answer": "no",
           "id": 59,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Tiene un bajo riesgo de malignización.",
           "simbol": "D",
           "answer": "no",
           "id": 60,
@@ -509,30 +512,31 @@
     },
     {
       "id": 16,
+      "question": "¿Cuál es el comportamiento biológico de la leucoplasia verrugosa proliferativa (LVP)?",
       "answers": [
         {
-          "question": "falso",
+          "question": "Tiene una alta tasa de reincidencia y elevado potencial de transformación maligna.",
           "simbol": "A",
-          "answer": "no",
+          "answer": "si",
           "id": 61,
           "seleccionado": false
         },
         {
-          "question": "verdadero",
+          "question": "Es de rápida evolución y desaparece sin tratamiento.",
           "simbol": "B",
-          "answer": "si",
+          "answer": "no",
           "id": 62,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Tiene un riesgo bajo de malignización.",
           "simbol": "C",
           "answer": "no",
           "id": 63,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "No se ha estudiado lo suficiente para determinar su comportamiento biológico.",
           "simbol": "D",
           "answer": "no",
           "id": 64,
@@ -542,30 +546,31 @@
     },
     {
       "id": 17,
+      "question": "¿Cuál es el patrón de displasia epitelial más severa en la leucoplasia?",
       "answers": [
         {
-          "question": "falso",
+          "question": "Displasia epitelial leve.",
           "simbol": "A",
           "answer": "no",
           "id": 65,
           "seleccionado": false
         },
         {
-          "question": "verdadero",
+          "question": "Displasia epitelial moderada.",
           "simbol": "B",
           "answer": "si",
           "id": 66,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Ausencia de displasia epitelial.",
           "simbol": "C",
           "answer": "no",
           "id": 67,
           "seleccionado": false
         },
         {
-          "question": "falso",
+          "question": "Displasia epitelial severa.",
           "simbol": "D",
           "answer": "no",
           "id": 68,
